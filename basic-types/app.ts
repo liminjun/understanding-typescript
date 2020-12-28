@@ -1,17 +1,16 @@
-function add(n1: number, n2: number, showResult: boolean) {
-    if (showResult) {
-        console.log(n1 + n2);
-    } else {
-        return n1 + n2;
-    }
-    
+let userInput: unknown;
+
+let userName: String;
+
+userInput = 5;
+userInput = 'hello'
+userName = 'liminjun'
+if(typeof userInput === 'string') {
+    userName = userInput;
 }
 
-const number1 = 5;
-const number2 = 2.8;
+function generateError(message: string, code: number): never {
+    throw {messsage: message,errorCode: code}
+}
 
-const printResult = true;
-
-const result = add(number1, number2, printResult);
-
-console.log(result);
+generateError('An error occurred!', 500)
